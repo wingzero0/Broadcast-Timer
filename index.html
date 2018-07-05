@@ -1,30 +1,32 @@
 <!-- Copyright Danielh90 2015. All Rights Reserved. --> 
 <!DOCTYPE html>
 <html> 
-	<head> 
-		<title> Stream Timer </title>
-			<link href="css/main.css" rel="stylesheet" type="text/css"> 
+    <head> 
+        <title> Stream Timer </title>
+            <link href="css/main.css" rel="stylesheet" type="text/css"> 
 
-		</head>
-	<body> 
-		<center><div class="wrapper"> 
-	<div class="timer"> 
+        </head>
+    <body> 
+        <center><div class="wrapper"> 
+    <div class="timer"> 
 <span id="time">10:00</span>
 
 <script type="text/javascript">
 function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
+    var timer = duration, hour, minutes, seconds;
     setInterval(function () {
+        hour = parseInt(timer / 60 / 60, 10);
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = minutes + ":" + seconds;
+        display.textContent = hour + ":" + minutes + ":" + seconds;
 
-        if (--timer < 0) {
-            timer = duration;
-        }
+        // if (--timer < 0) {
+        //     timer = duration;
+        // }
+        timer++;
     }, 1000);
 }
 
@@ -37,5 +39,5 @@ window.onload = function () {
 </script></center> 
  </div> 
 </div></center> 
-		</body>
-	</html>
+        </body>
+    </html>
