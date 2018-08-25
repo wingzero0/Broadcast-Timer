@@ -17,5 +17,8 @@ body{
 	font-size: 100px;
 	font-family: 'Oswald', sans-serif;
 	src: url(fonts/big_noodle_titling.ttf) format("truetype");
+	width: 100%;
+    position: absolute;
+    text-align: center;
 }
 
