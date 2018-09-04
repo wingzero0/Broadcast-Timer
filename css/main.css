@@ -1,5 +1,5 @@
 body{
-	background-color: #00FF12; 
+	/*background-color: #00FF12; */
 }
 
 @font-face {
@@ -17,8 +17,9 @@ body{
 	font-size: 100px;
 	font-family: 'Oswald', sans-serif;
 	src: url(fonts/big_noodle_titling.ttf) format("truetype");
-	width: 100%;
+	/*width: 100%;*/
     position: absolute;
     text-align: center;
+    height: 5px;
 }
 
