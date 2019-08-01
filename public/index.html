@@ -30,9 +30,7 @@
 
 
         window.onload = function () {
-                //Change TIME!
-            var advanceMinutes = 60 * 0, //Change the timer here! (60 * Number)
-                display = document.querySelector('#time');
+            var display = document.querySelector('#time');
             setInterval(function () {
                 reloadTimer(display);
             }, 1000);
