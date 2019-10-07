@@ -1,0 +1,20 @@
+<html>
+    <head> 
+        <style>
+            #items { overflow: hidden !important; }
+*:not(.yt-chat-badge):not(.yt-emoji-icon) { background: transparent !important; }
+.gaming-promo, #live-comments-controls, ::-webkit-scrollbar, wbr, .is-deleted, [is-deleted], #panel-pages, yt-live-chat-header-renderer { display: none !important; }
+#author-name, #message { color: white !important; text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px 0.5px 0 black !important; }
+#message { display: block !important; }
+#author-name::after { content: ":"; font-weight: 900; }
+#message a {color: skyblue !important; font-size: 0 !important; line-height: 9px !important;}
+#message a::after { content: attr(href); font-size: 10px !important; }
+@keyframes chat-fade { 0% { opacity: 1; position: relative; } 99% { opacity: 0; position: relative; } 100% { opacity: 0; position: absolute; }}
+yt-live-chat-text-message-renderer { animation: chat-fade 5s 30s forwards; }
+/* #author-photo { border-radius: 10px !important; } */
+        </style>
+    </head>
+    <body>
+        <iframe height="600" width="400" src="https://www.youtube.com/live_chat?v=qCz1vFgAdKY&embed_domain=localhost" style="border: 0; width:400px; height:600px; background-color: transparent;"></iframe>
+    </body>
+</html>
