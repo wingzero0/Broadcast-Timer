@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+    <title> Stream Timer </title>
+    <link href="css/main.css" rel="stylesheet" type="text/css"> 
+</head>
+<body> 
+    <div class="wrapper"> 
+        <div class="timer"> 
+            <span id="time">0:00:00</span>
+        </div>
+    </div>
+    <script type="text/javascript">
+    	var startTime = {
+			'id':'startTime',
+			'duration':3600,
+			'unix_time_in_second':new Date().getTime() / 1000
+		};
+        function reloadTimer(display) {
+            var currentTimestamp = new Date().getTime() / 1000;
+			var timer = currentTimestamp - startTime.unix_time_in_second + startTime.duration;
+			var hour, minutes, seconds;
+			hour = parseInt(timer / 3600 % 24, 10);
+			minutes = parseInt(timer / 60 % 60, 10);
+			seconds = parseInt(timer % 60, 10);
+			minutes = minutes < 10 ? "0" + minutes : minutes;
+			seconds = seconds < 10 ? "0" + seconds : seconds;
+			display.textContent = hour + ":" + minutes + ":" + seconds;
+			setInterval(function () {
+                reloadTimer(display);
+            }, 1000);
+        };
+
+        window.onload = function () {
+            var display = document.querySelector('#time');
+            setInterval(function () {
+                reloadTimer(display);
+            }, 1000);
+        };
+    </script>
+</body>
+</html>
